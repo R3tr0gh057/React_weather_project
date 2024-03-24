@@ -4,7 +4,7 @@ import search_icon from "../assets/search.png";
 import wind_icon from "../assets/wind.png";
 import humidity_icon from "../assets/humidity.png";
 export const WeatherApp = () => {
-  let api_key = "4008a6993a81485e9a8165713242303";
+  let api_key = "db3cc06f1b544ac3955180559242403";
 
   const search = async () => {
     const element = document.getElementsByClassName("cityInput");
