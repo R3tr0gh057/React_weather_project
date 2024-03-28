@@ -1,5 +1,6 @@
 import React from "react";
 import "./WeatherApp.css";
+import cloud from "../assets/cloud.png"
 import search_icon from "../assets/search.png";
 import wind_icon from "../assets/wind.png";
 import humidity_icon from "../assets/humidity.png";
@@ -21,19 +22,10 @@ export const WeatherApp = () => {
     const wind = document.getElementsByClassName("wind-speed");
     const temperature = document.getElementsByClassName("weather-temp");
     const locations = document.getElementsByClassName("weather-location");
-    // const [icon, seticon] = useState([]);
-    // let icon_url = ""
-
-    // icon_url ="http://" +data.current.condition.icon
     humidity[0].innerHTML = Math.floor(data.current.humidity) + "%";
     wind[0].innerHTML = Math.floor(data.current.wind_kph) + " km/h";
     temperature[0].innerHTML = Math.floor(data.current.temp_c) + " °C";
     locations[0].innerHTML = data.location.name;
-    // useEffect(() => {
-    //   fetch("https://reqres.in/api/users")
-    //     .then((response) => response.json())
-    //     .then((resData) => seticon(resData.data));
-    // }, []);
   };
 
   return (
@@ -50,7 +42,7 @@ export const WeatherApp = () => {
         </div>
       </div>
       <div className="weather-image">
-        <img src="" alt="" />
+        <img src={cloud} alt="" />
       </div>
       <div className="weather-temp">24°C</div>
       <div className="weather-location">London</div>
@@ -62,7 +54,7 @@ export const WeatherApp = () => {
             <div className="text">Humidity</div>
           </div>
         </div>
-        <div className="element">
+        <div className="element1">
           <img src={wind_icon} alt="" className="icon" />
           <div className="data">
             <div className="wind-speed">18 km/h</div>
